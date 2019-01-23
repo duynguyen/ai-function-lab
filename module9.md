@@ -1,14 +1,14 @@
 ---
 layout: module
-title: Exercise 5&#58; Adobe Sensei function 1&#58; auto tag + Adobe Experience Manager Update Tags
+title: Exercise 5&#58; AI function 1&#58; auto tag + Adobe Experience Manager Update Tags
 ---
 
 <!--
-# Exercise 5&#58; Adobe Sensei function: auto tag + Adobe Experience Manager Update Tags
+# Exercise 5&#58; AI function: auto tag + Adobe Experience Manager Update Tags
 -->
 
 ## Overview
-In this exercise you will add the **Adobe Sensei auto tag** function to auto tag an image followed by the Adobe Experience Manager Update Tags action to update the tags for the image in Adobe Experience Manager.
+In this exercise you will add the **auto tag** function to auto tag an image followed by the Adobe Experience Manager Update Tags action to update the tags for the image in Adobe Experience Manager.
 
 ## Steps
 1. In Visual Studio Code, open the `exercises/exercise-5/composition.js` file.
@@ -52,13 +52,13 @@ In this exercise you will add the **Adobe Sensei auto tag** function to auto tag
 ## Try it!
 1. First, preview your composition again to ensure your new changes are shown:
 
-       app preview ~/adobe-sensei-actions-lab/exercises/exercise-5/composition.js
+       app preview ~/ai-function-lab/exercises/exercise-5/composition.js
 
       ![](images/exercise5-flowb.png)
 
 2. Next, update the current `asset_created_composition` with your new version:
 
-       app update asset_created_composition ~/adobe-sensei-actions-lab/exercises/exercise-5/composition.js
+       app update asset_created_composition ~/ai-function-lab/exercises/exercise-5/composition.js
 
 3. Now open the browser to your Creative Cloud and upload an image to trigger an `asset_created` event.
 

@@ -1,6 +1,6 @@
 ---
 layout: module
-title: Exercise 3&#58; Adobe Sensei function 1&#58; body crop
+title: Exercise 3&#58; AI function 1&#58; body crop
 ---
 
 <!--
@@ -8,7 +8,7 @@ title: Exercise 3&#58; Adobe Sensei function 1&#58; body crop
 -->
 
 ## Overview
-In this exercise you will use the **Adobe Sensei body crop** function to identify reference points in the provided image to use for cropping out the body automatically.
+In this exercise you will use the **body crop** function to identify reference points in the provided image to use for cropping out the body automatically.
 
 ## Steps
 1. In Visual Studio Code, open `exercises/exercise-3/composition.js`.
@@ -34,21 +34,21 @@ In this exercise you will use the **Adobe Sensei body crop** function to identif
 ## Try it!
 1. First, preview your composition to ensure it contains the `sensei-bodycrop` action:
 
-       app preview ~/adobe-sensei-actions-lab/exercises/exercise-3/composition.js
+       app preview ~/ai-function-lab/exercises/exercise-3/composition.js
 
     ![](images/exercise3-flow.png)
 
 2. Next update the current `asset_created_composition` app with your new version:
 
-       app update asset_created_composition ~/adobe-sensei-actions-lab/exercises/exercise-3/composition.js
+       app update asset_created_composition ~/ai-function-lab/exercises/exercise-3/composition.js
 
-3. Now open the browser to your Creative Cloud folder and upload a new image to trigger an `asset_created` event. For instance, try `image2.png` from the `~/adobe-sensei-actions-lab/stock-photos` folder.
+3. Now open the browser to your Creative Cloud folder and upload a new image to trigger an `asset_created` event. For instance, try `image2.png` from the `~/ai-function-lab/stock-photos` folder.
 
-5. Switch back to the **Adobe I/O Runtime Shell** and type:
+4. Switch back to the **Adobe I/O Runtime Shell** and type:
 
        session list
 
-6. Locate the most recent `asset_created_composition` running and click on the session id to view the result. The response should contain the coordinates to crop, like shown below:
+5. Locate the most recent `asset_created_composition` running and click on the session id to view the result. The response should contain the coordinates to crop, like shown below:
 
     ![](images/bodycrop-result.png)
 

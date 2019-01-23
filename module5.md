@@ -1,6 +1,6 @@
 ---
 layout: module
-title: Exercise 1&#58; Adobe Sensei function 1&#58; image quality
+title: Exercise 1&#58; AI function 1&#58; image quality
 ---
 
 <!--
@@ -8,12 +8,12 @@ title: Exercise 1&#58; Adobe Sensei function 1&#58; image quality
 -->
 
 ## Overview
-In this exercise you will use the **Adobe Sensei image quality** function to retrieve aesthetic scores for an image, including an overall quality score.
+In this exercise you will use the **image quality** function to retrieve aesthetic scores for an image, including an overall quality score.
 
 ## Steps
 1. Open the **Visual Studio Code** application on your worksation located under the **Applications** folder (or in the dock toolbar).
 
-2. Go to **File -> Open** and locate the folder for the exercises and solutions pre-loaded on your workstation in your user directory at `~/adobe-sensei-actions-lab`.
+2. Go to **File -> Open** and locate the folder for the exercises and solutions pre-loaded on your workstation in your user directory at `~/ai-function-lab`.
 
 3. Begin by opening the `exercises/exercise-1/composition.js` file to learn about some specific concepts you'll need to understand for the remainder of the lab.
 
@@ -27,7 +27,7 @@ In this exercise you will use the **Adobe Sensei image quality** function to ret
 
 4. Before editing any code, go back into the **Adobe I/O Runtime Shell** application and preview the base composition flow with the following command:
 
-       app preview ~/adobe-sensei-actions-lab/exercises/exercise-1/composition.js
+       app preview ~/ai-function-lab/exercises/exercise-1/composition.js
 
     ![](images/exercise1-base-flow.png)
 
@@ -55,7 +55,7 @@ In this exercise you will use the **Adobe Sensei image quality** function to ret
 ## Try it!
 1. Switch back into the **Adobe I/O Runtime Shell** and preview your updated composition flow with your changes. Make sure it contains the `sensei-imagequality` action in the visualization as shown below before moving on:
 
-       app preview ~/adobe-sensei-actions-lab/exercises/exercise-1/composition.js
+       app preview ~/ai-function-lab/exercises/exercise-1/composition.js
 
     ![](images/exercise1-flow.png)
 
@@ -63,13 +63,13 @@ In this exercise you will use the **Adobe Sensei image quality** function to ret
 
 2. Deploy the `asset_created_composition` with your updated version:
 
-       app update asset_created_composition ~/adobe-sensei-actions-lab/exercises/exercise-1/composition.js
+       app update asset_created_composition ~/ai-function-lab/exercises/exercise-1/composition.js
 
 1. Now go back to the browser where your Creative Cloud instance is open and navigate into the new folder you created previously (ie: **sensei-lab-1**).
 
 1. Drag and drop (or upload) an image from your workstation into your Creative Cloud folder to trigger an `asset_created` event.
 
-    > **NOTE:** There are images provided for testing within your `~/adobe-sensei-actions-lab/stock-photos` folder. For instance, drag and drop `image1.png` and look at the resulting quality scores.
+    > **NOTE:** There are images provided for testing within your `~/ai-function-lab/stock-photos` folder. For instance, drag and drop `image1.png` and look at the resulting quality scores.
 
 1. Switch back to the **Adobe I/O Runtime Shell** application and run the `session list` command to list all of the current sessions:
 

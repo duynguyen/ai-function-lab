@@ -14,9 +14,9 @@ The Adobe I/O Console provides the definitive destination for any developer look
 
 1. Open your browser to the [Adobe I/O Console](https://console.adobe.io) and login with your pre-defined CC id and pw.
 
-2. Ensure the **Integrations** tab is selected, then locate the integration by the name of `Sensei lab X` (where X is your assigned lab #) and click on it.
+2. Ensure the **Integrations** tab is selected, then locate the integration by the name of `L741+X` (where X is your assigned lab #) and click on it.
 
-3. Once it's open, locate the **Default redirect URI** for your assigned user number and copy it. For instance, the one assigned to user **Sensei Lab 1** is outlined in red below:
+3. Once it's open, locate the **Default redirect URI** for your assigned user number and copy it. For instance, the one assigned to user **L741+01** is outlined in red below:
 
      ![](images/console-redirect.png)
 
@@ -30,7 +30,7 @@ The Adobe I/O Console provides the definitive destination for any developer look
 
 1. Once logged in, look for the **Creative Cloud Files** or **Files** link under **Assets** and click on it.
 
-1. **IMPORTANT:** Before moving on, you must create your own personal folder to be used throughout this workshop. On the top right, click on the **Actions** arrow and choose **Create Folder** from the options. Name it `sensei-lab-x` where `x` is your assigned lab user number.
+1. **IMPORTANT:** Before moving on, you must create your own personal folder to be used throughout this workshop. On the top right, click on the **Actions** arrow and choose **Create Folder** from the options. Name it `ai-function-lab-x` where `x` is your assigned lab user number.
 
    ![](images/cc-folder-create.png)
 

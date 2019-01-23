@@ -27,15 +27,15 @@ In this exercise you will add code to check the overall quality score received f
 ## Try it!
 1. First preview your composition again to ensure your new changes are shown before moving on:
 
-       app preview ~/adobe-sensei-actions-lab/exercises/exercise-2/composition.js
+       app preview ~/ai-function-lab/exercises/exercise-2/composition.js
 
       ![](images/exercise2-flow.png)
 
 2. Next, update the currently deployed version of the `asset_created_composition` with your edited version:
 
-       app update asset_created_composition ~/adobe-sensei-actions-lab/exercises/exercise-2/composition.js
+       app update asset_created_composition ~/ai-function-lab/exercises/exercise-2/composition.js
 
-3. Open the browser to your Creative Cloud instance and trigger the `asset_created` event by uploading a low quality image into it. One has been included for you within the projects `~/adobe-sensei-actions-lab/stock-photos` folder by the name of `quality-fail.png`.
+3. Open the browser to your Creative Cloud instance and trigger the `asset_created` event by uploading a low quality image into it. One has been included for you within the projects `~/ai-function-lab/stock-photos` folder by the name of `quality-fail.png`.
 
 5. Switch back to the **Adobe I/O Runtime Shell** to find your session by running the following command:
 

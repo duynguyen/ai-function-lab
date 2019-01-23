@@ -1,4 +1,4 @@
-# adobe-sensei-ai-functions
+# ai-function-lab
 
-## Adobe Summit 2018 Lab on Sensei Functions (aka Sensei Actions)
+## Adobe Tech Summit 2019 Lab on AI actions with Adobe Cloud Platform
 See https://apiplatform.github.io/adobe-sensei-ai-functions

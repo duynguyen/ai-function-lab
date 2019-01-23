@@ -1,14 +1,14 @@
 ---
 layout: module
-title: Exercise 4&#58; Adobe Sensei function 1&#58; auto swatch + Adobe Experience Manager Copy/Crop
+title: Exercise 4&#58; AI function 1&#58; auto swatch + Adobe Experience Manager Copy/Crop
 ---
 
 <!--
-# Exercise 4&#58; Adobe Sensei function: auto swatch + Adobe Experience Manager Copy/Crop
+# Exercise 4&#58; AI function: auto swatch + Adobe Experience Manager Copy/Crop
 -->
 
 ## Overview
-In this exercise you will add the **Adobe Sensei auto swatch** function to automatically extract color swatches from your image, then call an Adobe Experience Manager action that will crop and create swatches from your image, then copy them into Adobe Experience Manager.
+In this exercise you will add the **auto swatch** function to automatically extract color swatches from your image, then call an Adobe Experience Manager action that will crop and create swatches from your image, then copy them into Adobe Experience Manager.
 
 ## Steps
 1. In Visual Studio Code, open the `exercises/exercise-4/composition.js` file.
@@ -49,13 +49,13 @@ In this exercise you will add the **Adobe Sensei auto swatch** function to autom
 ## Try it!
 1. First, preview your composition again to ensure your new changes are shown:
 
-       app preview ~/adobe-sensei-actions-lab/exercises/exercise-4/composition.js
+       app preview ~/ai-function-lab/exercises/exercise-4/composition.js
 
       ![](images/exercise4-flowb.png)
 
 2. Next, update the current `asset_created_composition` with your new version:
 
-       app update asset_created_composition ~/adobe-sensei-actions-lab/exercises/exercise-4/composition.js
+       app update asset_created_composition ~/ai-function-lab/exercises/exercise-4/composition.js
 
 3. Now open the browser to your Creative Cloud and upload an image to trigger an `asset_created` event.
 
