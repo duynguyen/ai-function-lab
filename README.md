@@ -1,7 +1,7 @@
-# adobe-sensei-ai-functions
+# ai-functions
 
-## Adobe Summit 2018 Lab on Sensei Functions (aka Sensei Actions)
+## Adobe Tech Summit 2019 Lab on AI Functions
 
 See https://adobe.github.io/adobe-sensei-ai-functions for the online lab
 
-Approx time: 90mins
+Approx time: 60mins

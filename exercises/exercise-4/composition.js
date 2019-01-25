@@ -62,7 +62,7 @@ composer.sequence(
     }
   }, params),
   /**
-   * Invoke the '/sensei/1.0/sensei-imagequality' action
+   * Invoke the '/ai-lab/1.0/imagequality' action
    * passing the imageObject as parameter
    */
   composer.retain(
@@ -70,7 +70,7 @@ composer.sequence(
       params => ({
         "image": params.imageObject
       }),
-    '/sensei/1.0/sensei-imagequality'
+    '/ai-lab/1.0/imagequality'
     )
   ),
   /* grab image quality results */
@@ -89,14 +89,14 @@ composer.sequence(
      */
     composer.sequence(
       /**
-       *  Use the action '/sensei/1.0/sensei-bodycrop' to crop the body.
+       *  Use the action '/ai-lab/1.0/bodycrop' to crop the body.
        */
       composer.retain(
         composer.sequence(
           params => ({
             "image": params.imageObject
           }),
-        '/sensei/1.0/sensei-bodycrop'
+        '/ai-lab/1.0/bodycrop'
         )
       ),
       /* grab bodycrop results */
@@ -105,7 +105,7 @@ composer.sequence(
         params
       ),
       /**
-       * TODO: Invoke '/sensei/1.0/sensei-autoswatch'
+       * TODO: Invoke '/ai-lab/1.0/autoswatch'
        */
       
       /** TODO: Copy asset to AEM 

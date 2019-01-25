@@ -62,7 +62,7 @@ composer.sequence(
     }
   }, params),
   /**
-   * Invoke the '/sensei/1.0/sensei-imagequality' action
+   * Invoke the '/ai-lab/1.0/imagequality' action
    * passing the imageObject as parameter
    */
   composer.retain(
@@ -70,16 +70,16 @@ composer.sequence(
       params => ({
         "image": params.imageObject
       }),
-    '/sensei/1.0/sensei-imagequality'
+    '/ai-lab/1.0/imagequality'
     )
   ),
   /* grab image quality results */
   ({result, params}) => Object.assign({}, result, params),
-  /** 
+  /**
    * Check the image quality. If quality is not met, upload
    * the asset into a folder invoking the '/adobe/acp-assets-0.5.0/cc-upload-manual' action.
    * Use composer.if( <condition>, <then>, <else>) construct.
-   * For <then> you can choose to simply return the params using: 
+   * For <then> you can choose to simply return the params using:
    * (params) => params
    */
   composer.if(
@@ -89,12 +89,12 @@ composer.sequence(
      */
     composer.sequence(
       /**
-       * TODO: Use the action '/sensei/1.0/sensei-bodycrop' to crop the body.
-       * Use the same constructs used for sensei-imagequality 
-       * composer.retain( 
+       * TODO: Use the action '/ai-lab/1.0/bodycrop' to crop the body.
+       * Use the same constructs used for imagequality
+       * composer.retain(
        *   composer.sequence( ...)
        * )
-       */      
+       */
     ),
     /* if quality is NOT met, copy asset to manual process folder in CC */
    '/adobe/acp-assets-0.5.0/cc-upload-manual')

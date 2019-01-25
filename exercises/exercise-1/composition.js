@@ -62,8 +62,7 @@ composer.sequence(
       }
     }, params)
     /**
-     * TODO: Invoke the /sensei/1.0/sensei-imagequality action
+     * TODO: Invoke the /ai-lab/1.0/imagequality action
      * passing the imageObject as parameter
      */
 )
-  

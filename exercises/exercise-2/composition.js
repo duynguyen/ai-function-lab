@@ -62,7 +62,7 @@ composer.sequence(
       }
     }, params),
     /**
-     * Invoke the '/sensei/1.0/sensei-imagequality' action
+     * Invoke the '/ai-lab/1.0/imagequality' action
      * passing the imageObject as parameter
      */
     composer.retain(
@@ -70,17 +70,16 @@ composer.sequence(
         params => ({
           "image": params.imageObject
         }),
-      '/sensei/1.0/sensei-imagequality'
+      '/ai-lab/1.0/imagequality'
       )
     ),
     /* grab image quality results */
     ({result, params}) => Object.assign({}, result, params),
-    /** 
+    /**
      * TODO: check the image quality. If quality is not met, upload
      * the asset into a folder invoking the '/adobe/acp-assets-0.5.0/cc-upload-manual' action.
      * Use composer.if( <condition>, <then>, <else>) construct.
-     * For <then> you can choose to simply return the params using: 
+     * For <then> you can choose to simply return the params using:
      * (params) => params
      */
 )
-  

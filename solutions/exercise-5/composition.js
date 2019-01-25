@@ -62,7 +62,7 @@ composer.sequence(
     }
   }, params),
   /**
-   * Invoke the '/sensei/1.0/sensei-imagequality' action
+   * Invoke the '/ai-lab/1.0/imagequality' action
    * passing the imageObject as parameter
    */
   composer.retain(
@@ -70,16 +70,16 @@ composer.sequence(
       params => ({
         "image": params.imageObject
       }),
-    '/sensei/1.0/sensei-imagequality'
+    '/ai-lab/1.0/imagequality'
     )
   ),
   /* grab image quality results */
   ({result, params}) => Object.assign({}, result, params),
-  /** 
+  /**
    * Check the image quality. If quality is not met, upload
    * the asset into a folder invoking the '/adobe/acp-assets-0.5.0/cc-upload-manual' action.
    * Use composer.if( <condition>, <then>, <else>) construct.
-   * For <then> you can choose to simply return the params using: 
+   * For <then> you can choose to simply return the params using:
    * (params) => params
    */
   composer.if(
@@ -89,14 +89,14 @@ composer.sequence(
      */
     composer.sequence(
       /**
-       *  Use the action '/sensei/1.0/sensei-bodycrop' to crop the body.
+       *  Use the action '/ai-lab/1.0/bodycrop' to crop the body.
        */
       composer.retain(
         composer.sequence(
           params => ({
             "image": params.imageObject
           }),
-        '/sensei/1.0/sensei-bodycrop'
+        '/ai-lab/1.0/bodycrop'
         )
       ),
       /* grab bodycrop results */
@@ -105,7 +105,7 @@ composer.sequence(
         params
       ),
       /**
-       * Invoke '/sensei/1.0/sensei-autoswatch'
+       * Invoke '/ai-lab/1.0/autoswatch'
        */
       composer.retain(
         composer.sequence(
@@ -114,17 +114,17 @@ composer.sequence(
             "results": 2,
             "size": 0
           }),
-        '/sensei/1.0/sensei-autoswatch'
+        '/ai-lab/1.0/autoswatch'
         )
       ),
       /* grab autoswatch results */
       ({result, params}) => Object.assign({}, result, params),
-      /** Copy asset to AEM 
+      /** Copy asset to AEM
        *  invoking '/adobe/acp-assets-0.5.0/aem-copy-asset-and-crop' action
        */
       '/adobe/acp-assets-0.5.0/aem-copy-asset-and-crop',
       /**
-       * Autotag the image invoking '/sensei/1.0/sensei-autotag' action.
+       * Autotag the image invoking '/ai-lab/1.0/autotag' action.
        */
       composer.retain(
         composer.sequence(
@@ -133,7 +133,7 @@ composer.sequence(
             "confidence": 0.5,
             "results": 20
           }),
-        '/sensei/1.0/sensei-autotag',
+        '/ai-lab/1.0/autotag',
         (r) => { r.tags.push({"tag": "created with io runtime", "confidence":"1"}); return r; }
         )
       ),

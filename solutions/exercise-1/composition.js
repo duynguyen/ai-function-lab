@@ -61,17 +61,16 @@ composer.sequence(
         }
       }
     }, params),
-    /* Invoke the /sensei/1.0/sensei-imagequality action
+    /* Invoke the /ai-lab/1.0/imagequality action
      * passing the imageObject as parameter */
     composer.retain(
       composer.sequence(
         params => ({
           "image": params.imageObject
         }),
-      '/sensei/1.0/sensei-imagequality'
+      '/ai-lab/1.0/imagequality'
       )
     ),
     /* grab image quality results */
     ({result, params}) => Object.assign({}, result, params)
 )
-  
