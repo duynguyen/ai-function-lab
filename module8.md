@@ -12,14 +12,14 @@ In this exercise you will add the **auto swatch** function to automatically extr
 
 ## Steps
 1. In Visual Studio Code, open the `exercises/exercise-4/composition.js` file.
-2. Just after the `TODO` block, add the following code to invoke the `/sensei/1.0/sensei-autoswatch` action to crop the body of the image. The parameters you're passing are:
+2. Just after the `TODO` block, add the following code to invoke the `/ai-lab/1.0/autoswatch` action to crop the body of the image. The parameters you're passing are:
 
     - `image` - the image object to use for swatches
     - `results` - max number of swatches to return
     - `size` - size of the swatch (or 0)
 
           /**
-           * TODO: Invoke '/sensei/1.0/sensei-autoswatch'
+           * TODO: Invoke '/ai-lab/1.0/autoswatch'
            */
           composer.retain(
             composer.sequence(
@@ -28,7 +28,7 @@ In this exercise you will add the **auto swatch** function to automatically extr
                 "results": 2,
                 "size": 0
               }),
-            '/sensei/1.0/sensei-autoswatch'
+            '/ai-lab/1.0/autoswatch'
             )
           ),
           /* grab autoswatch results */
@@ -36,7 +36,7 @@ In this exercise you will add the **auto swatch** function to automatically extr
 
 3. Now that the image quality has been checked and the crop and swatch results returned, the image is ready to be copied into Adobe Experience Manager for final distribution.
 
-    After the `sensei-autoswatch` results are returned, code the following action to perform the crops on the image and copy it into Adobe Experience Manager:
+    After the `autoswatch` results are returned, code the following action to perform the crops on the image and copy it into Adobe Experience Manager:
 
           /**
            *  TODO: Copy asset to Adobe Experience Manager
@@ -71,7 +71,7 @@ In this exercise you will add the **auto swatch** function to automatically extr
 
     > **NOTE:** Use the Adobe Experience Manager host and credentials provided to login and check Adobe Experience Manager for the file.
 
-    Notice the images now have the face cropped out and a new folder has been created to hold the swatches for the image sized based on the sensei-swatch action results:
+    Notice the images now have the face cropped out and a new folder has been created to hold the swatches for the image sized based on the autoswatch action results:
 
       ![](images/swatches-aem.png)
 

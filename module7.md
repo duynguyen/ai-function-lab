@@ -4,7 +4,7 @@ title: Exercise 3&#58; AI function 1&#58; body crop
 ---
 
 <!--
-# Exercise 3&#58; Adobe Sensei function: body crop
+# Exercise 3&#58; AI function: body crop
 -->
 
 ## Overview
@@ -12,17 +12,17 @@ In this exercise you will use the **body crop** function to identify reference p
 
 ## Steps
 1. In Visual Studio Code, open `exercises/exercise-3/composition.js`.
-2. Just after the `TODO` block, add the code snippet below to invoke the `/sensei/1.0/sensei-bodycrop` action. The code will pass in the `image` object and save the result in a `crops` object. The result will contain the constraints recommended for cropping out the body of the image.
+2. Just after the `TODO` block, add the code snippet below to invoke the `/ai-lab/1.0/bodycrop` action. The code will pass in the `image` object and save the result in a `crops` object. The result will contain the constraints recommended for cropping out the body of the image.
 
         /**
-         *  TODO: Use the action '/sensei/1.0/sensei-bodycrop' to crop the body.
+         *  TODO: Use the action '/ai-lab/1.0/bodycrop' to crop the body.
          */
         composer.retain(
             composer.sequence(
                 params => ({
                     "image": params.imageObject
                 }),
-            '/sensei/1.0/sensei-bodycrop'
+            '/ai-lab/1.0/bodycrop'
             )
         ),
         /* grab bodycrop results */
@@ -32,7 +32,7 @@ In this exercise you will use the **body crop** function to identify reference p
         )
 
 ## Try it!
-1. First, preview your composition to ensure it contains the `sensei-bodycrop` action:
+1. First, preview your composition to ensure it contains the `bodycrop` action:
 
        app preview ~/ai-function-lab/exercises/exercise-3/composition.js
 

@@ -12,14 +12,14 @@ In this exercise you will add the **auto tag** function to auto tag an image fol
 
 ## Steps
 1. In Visual Studio Code, open the `exercises/exercise-5/composition.js` file.
-2. Just after the `TODO` block, begin adding code to call the `/sensei/1.0/sensei-autotag` action to predict tags for the image. The parameters you'll need to pass are:
+2. Just after the `TODO` block, begin adding code to call the `/ai-lab/1.0/autotag` action to predict tags for the image. The parameters you'll need to pass are:
 
     - `image` - the image object to use for swatches
     - `confidence` - level of confidence from 0-1 where 1 is the highest confidence
     - `results` - number of tags to return
 
           /**
-           * TODO: Autotag the image invoking '/sensei/1.0/sensei-autotag' action.
+           * TODO: Autotag the image invoking '/ai-lab/1.0/autotag' action.
            */
           composer.retain(
             composer.sequence(
@@ -28,7 +28,7 @@ In this exercise you will add the **auto tag** function to auto tag an image fol
                 "confidence": 0.5,
                 "results": 10
               }),
-            '/sensei/1.0/sensei-autotag',
+            '/ai-lab/1.0/autotag',
             (r) => { r.tags.push({"tag": "created with io runtime", "confidence":"1"}); return r; }
             )
           ),

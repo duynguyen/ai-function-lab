@@ -36,7 +36,7 @@ Understand how your Adobe I/O integration is configured with a webhook action to
 
      ![](images/handler-log-example.png)
 
-5. Before leaving the Adobe I/O Runtime Shell, execute the `action get /sensei/1.0/` command to view the names of the Adobe Sensei functions currently defined in your namespace. You should see a list like the following. These actions will be used throughout the rest of the exercises to add specific Adobe Sensei functions.
+5. Before leaving the Adobe I/O Runtime Shell, execute the `action get /ai-lab/1.0/` command to view the names of the AI functions currently defined in your namespace. You should see a list like the following. These actions will be used throughout the rest of the exercises to add specific AI functions.
 
    ![](images/sensei-action-list.png)
 

@@ -7,7 +7,7 @@ title: Exercise 2&#58; Manual image processing
 -->
 
 ## Overview
-In this exercise you will add code to check the overall quality score received from the previous **Adobe Sensei image quality** function. When the quality score does not meet an acceptable range, you will call an action to upload it back to Creative Cloud for manual processing.
+In this exercise you will add code to check the overall quality score received from the previous **image quality** function. When the quality score does not meet an acceptable range, you will call an action to upload it back to Creative Cloud for manual processing.
 
 ## Steps
 1. In Visual Studio Code, open the `exercises/exercise-2/composition.js` file.

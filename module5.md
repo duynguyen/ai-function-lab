@@ -4,7 +4,7 @@ title: Exercise 1&#58; AI function 1&#58; image quality
 ---
 
 <!--
-# Exercise 1&#58; Adobe Sensei function: image quality
+# Exercise 1&#58; AI function: image quality
 -->
 
 ## Overview
@@ -33,14 +33,14 @@ In this exercise you will use the **image quality** function to retrieve aesthet
 
 5. Now switch back into your editor where the `exercises/exercise-1/composition.js` file is open, locate the `TODO` comment block and add the following:
 
-       /* TODO: Invoke the /sensei/1.0/sensei-imagequality action
+       /* TODO: Invoke the /ai-lab/1.0/imagequality action
         * passing the imageObject as parameter */
        ,composer.retain(
          composer.sequence(
            params => ({
              "image": params.imageObject
            }),
-         '/sensei/1.0/sensei-imagequality'
+         '/ai-lab/1.0/imagequality'
          )
        ),
        /* grab image quality results */
@@ -48,12 +48,12 @@ In this exercise you will use the **image quality** function to retrieve aesthet
 
     This code will:
 
-    1. Invoke the `/sensei/1.0/sensei-imagequality` action with a parameter named `image` set to the `imageObject` parameter (previously defined in the base composition code and extracted from the asset created event).
+    1. Invoke the `/ai-lab/1.0/imagequality` action with a parameter named `image` set to the `imageObject` parameter (previously defined in the base composition code and extracted from the asset created event).
 
     2. Retain the result received from running the action for further use
 
 ## Try it!
-1. Switch back into the **Adobe I/O Runtime Shell** and preview your updated composition flow with your changes. Make sure it contains the `sensei-imagequality` action in the visualization as shown below before moving on:
+1. Switch back into the **Adobe I/O Runtime Shell** and preview your updated composition flow with your changes. Make sure it contains the `imagequality` action in the visualization as shown below before moving on:
 
        app preview ~/ai-function-lab/exercises/exercise-1/composition.js
 
@@ -65,7 +65,7 @@ In this exercise you will use the **image quality** function to retrieve aesthet
 
        app update asset_created_composition ~/ai-function-lab/exercises/exercise-1/composition.js
 
-1. Now go back to the browser where your Creative Cloud instance is open and navigate into the new folder you created previously (ie: **sensei-lab-1**).
+1. Now go back to the browser where your Creative Cloud instance is open and navigate into the new folder you created previously (ie: **ai-lab-1**).
 
 1. Drag and drop (or upload) an image from your workstation into your Creative Cloud folder to trigger an `asset_created` event.
 
@@ -77,7 +77,7 @@ In this exercise you will use the **image quality** function to retrieve aesthet
 
 1. Locate the most recent `asset_created_composition` running and click on the session id to view the session details.
 
-   The `RESULT` tab displays the results in JSON format. If the Sensei image quality action ran successfully, you should see an element in the JSON named `scores`, with values assigned for attributes further explained below. The `quality` value is an overall score based on the rest of the individual attributes, and ranges between 0-1 where a higher quality image results in a higher score.
+   The `RESULT` tab displays the results in JSON format. If the image quality action ran successfully, you should see an element in the JSON named `scores`, with values assigned for attributes further explained below. The `quality` value is an overall score based on the rest of the individual attributes, and ranges between 0-1 where a higher quality image results in a higher score.
 
     ![](images/image-quality-scores.png)
 
