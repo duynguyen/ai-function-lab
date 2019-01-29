@@ -75,11 +75,11 @@ composer.sequence(
   ),
   /* grab image quality results */
   ({result, params}) => Object.assign({}, result, params),
-  /** 
+  /**
    * check the image quality. If quality is not met, upload
-   * the asset into a folder invoking the '/adobe/acp-assets-0.5.0/cc-upload-manual' action.
+   * the asset into a folder invoking the '/ai-lab/1.0/cc-upload-manual' action.
    * Use composer.if( <condition>, <then>, <else>) construct.
-   * For <then> you can choose to simply return the params using: 
+   * For <then> you can choose to simply return the params using:
    * (params) => params
    */
   composer.if(
@@ -107,12 +107,12 @@ composer.sequence(
       /**
        * TODO: Invoke '/ai-lab/1.0/autoswatch'
        */
-      
-      /** TODO: Copy asset to AEM 
-       *  invoking '/adobe/acp-assets-0.5.0/aem-copy-asset-and-crop' action
+
+      /** TODO: Copy asset to AEM
+       *  invoking '/ai-lab/1.0/aem-copy-asset' action
        */
-      
+
     ),
     /* if quality is NOT met, copy asset to manual process folder in CC */
-   '/adobe/acp-assets-0.5.0/cc-upload-manual')
+   '/ai-lab/1.0/cc-upload-manual')
 )

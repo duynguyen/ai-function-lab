@@ -77,7 +77,7 @@ composer.sequence(
   ({result, params}) => Object.assign({}, result, params),
   /**
    * Check the image quality. If quality is not met, upload
-   * the asset into a folder invoking the '/adobe/acp-assets-0.5.0/cc-upload-manual' action.
+   * the asset into a folder invoking the '/ai-lab/1.0/cc-upload-manual' action.
    * Use composer.if( <condition>, <then>, <else>) construct.
    * For <then> you can choose to simply return the params using:
    * (params) => params
@@ -120,9 +120,9 @@ composer.sequence(
       /* grab autoswatch results */
       ({result, params}) => Object.assign({}, result, params),
       /** Copy asset to AEM
-       *  invoking '/adobe/acp-assets-0.5.0/aem-copy-asset-and-crop' action
+       *  invoking '/ai-lab/1.0/aem-copy-asset-and-crop' action
        */
-      '/adobe/acp-assets-0.5.0/aem-copy-asset-and-crop',
+      '/ai-lab/1.0/aem-copy-asset',
       /**
        * Autotag the image invoking '/ai-lab/1.0/autotag' action.
        */
@@ -140,14 +140,14 @@ composer.sequence(
       /* grab autotag results */
       ({result, params}) => Object.assign({}, result, params),
       /**
-       * Update the tags in AEM Assets by invoking '/adobe/acp-assets-0.5.0/aem-update-tags'
+       * Update the tags in AEM Assets by invoking '/ai-lab/1.0/aem-update-tags'
        */
-      '/adobe/acp-assets-0.5.0/aem-update-tags',
+      '/ai-lab/1.0/aem-update-tags',
       /**
        * Return the result as-is
        */
       result => result
     ),
     /* if quality is NOT met, copy asset to manual process folder in CC */
-   '/adobe/acp-assets-0.5.0/cc-upload-manual')
+   '/ai-lab/1.0/cc-upload-manual')
 )

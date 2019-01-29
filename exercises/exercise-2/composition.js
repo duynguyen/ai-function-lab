@@ -77,7 +77,7 @@ composer.sequence(
     ({result, params}) => Object.assign({}, result, params),
     /**
      * TODO: check the image quality. If quality is not met, upload
-     * the asset into a folder invoking the '/adobe/acp-assets-0.5.0/cc-upload-manual' action.
+     * the asset into a folder invoking the '/ai-lab/1.0/cc-upload-manual' action.
      * Use composer.if( <condition>, <then>, <else>) construct.
      * For <then> you can choose to simply return the params using:
      * (params) => params
